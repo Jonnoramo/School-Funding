@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+{% block content %}
+<div  id="" class="container-fluid">
+    <div class="row">
+        <div id="filter-menu" class="col-sm-12">
+            <!-- <div class="chart-wrapper" data-step="1" data-intro=" The description that you want" data-position="right"> -->
+                <div class="chart-wrapper">
+                    <div class="row">
+                        <div class="chart-stage">
+                            <div class="col-sm-3" id="menu-select-state">State<br></div>
+                            <div class="col-sm-3" id="menu-select-resource">Resource<br></div>
+                            <div class="col-sm-3" id="menu-select-price">Price<br></div>
+                            <div class="col-sm-3" id="menu-select-donations">Donations<br></div>
+                            <div class="col-sm-3" id="menu-select-date">Date<br></div>
+                            <div class="col-sm-3" id="menu-select-funding">Funding<br></div>
+                            <div class="col-sm-3" id="menu-select-Poverty">Poverty<br></div>
+                            <div class="col-sm-3" id="menu-select-teacher">Teacher<br></div>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div><!-- #filter-menu --> 
+        <div id="table" class="col-sm-12">
+            <!-- <div class="chart-wrapper" data-step="2" data-intro=" The description that you want" data-position="right"> -->
+                <div class="chart-wrapper">
+                    <div class="chart-stage">
+                        <div style="clear:both">
+                            <table id="data-table" class="table table-hover">
+                                <thead>
+                                    <tr class="header">
+                                        <th><span>State</span></th>
+                                        <th><span>Resource type</span></th>
+                                        <th><span>Poverty level</span></th>
+                                        <th><span>Date Posted</span></th>
+                                        <th><span>Total Donation ($)</span></th>
+                                        <th><span>Funding status</span></th>
+                                        <th><span>Price</span></th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div><!-- #table --> 
+    </div>
+</div>
+{% endblock %}

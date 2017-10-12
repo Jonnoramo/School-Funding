@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Funding Dashboard</title>
+
+    <link rel="stylesheet" href="./static/lib/css//bootstrap.min.css">
+    <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
+    <link rel="stylesheet" href="./static/lib/css/dc.css">
+    <link rel="stylesheet" href="./static/css/custom.css">
+    <link rel="stylesheet" href="./static/lib/css/introjs.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,900italic,900,700italic,700,500italic,500,400italic,100,100italic,300,300italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="application">
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="./"><b>School Funding</b> Dashboard</a>
+            </div>
+            <ul class="nav navbar-nav">
+
+                <li><a id="intro-start" href='javascript:introJs().start();'><span class="glyphicon glyphicon-road" aria-hidden="true"></span>&nbsp;&nbsp;<b>Chart tour!</b></a></li>
+
+                <li><a href="{{ url_for('index') }}"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span>&nbsp;&nbsp;<b>Charts</b></a></li>
+
+                <li><a href="{{ url_for('detail') }}"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;&nbsp;<b>Data table</b></a></li>
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li id="row-selection" class="dc-data-count"><span class="filter-count">_</span> selected out of <span class="total-count">_</span> records</li>
+                <li><a href='javascript:dc.filterAll();dc.redrawAll();' title="Unless you want to apply several filters at the same time, it's recommended to reset filters after each query."><span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;&nbsp;<b>Reset All</b></a></li>
+            </ul>     
+        </div>
+    </div>
+
+
+
+    {% block content %}
+
+    {% endblock %}
+
+     
+
+    <hr>
+
+    <p class="small text-muted"> Data viz - Project 2 for Code Institute</p>
+
+    
+
+    <script src="./static/lib/js/bootstrap.min.js"></script>
+    <script src="./static/lib/js/jquery.min.js"></script>
+    <script src="./static/lib/js/crossfilter.js"></script>
+    <script src="./static/lib/js/d3.js"></script>
+    <script src="./static/lib/js/dc.js"></script>
+    <script src="./static/lib/js/queue.js"></script>   
+    <script src="./static/lib/js/keen.min.js"></script>
+    <script src='./static/js/sf_graph.js' type='text/javascript'></script>
+    <script src="./static/lib/js/intro.js" type="text/javascript"></script>
+
+</body>
+</html>
